@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h1 {
+    font-size: 4.5em;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 30%;
+}
+
+.left_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sketch_body {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-around;
+
+    width: 35em;
+    height: 35em;
+    background-color: aliceblue;
+
+    filter: drop-shadow(0 0 0.75rem grey);
+    border-color: black;
+    border-width: 1px;
+
+    cursor: pointer;
+}
+
+.options button {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+.options li{
+    padding-bottom: 1em;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 50px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #464747;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+}

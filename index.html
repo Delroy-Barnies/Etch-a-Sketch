@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-sketch</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="icons/2250037_art_artistic_brush_materials_paint_icon.svg">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left_side">
+            <h1>Etch-a-Sketch</h1>
+            <div id="sketch_body" class="sketch_body"></div>
+        </div>
+
+        <div class="right_side">
+            <ul class="options">
+                <li>
+                    Color: <input id="jscolor" value="#3399FF80" data-jscolor="{}">
+                    </li>
+                <li>
+                    <div class="slidecontainer">
+                        <p>Value: <span id="demo"></span></p>
+                        <input type="range" min="2" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                </li>
+                <li><button id="darken_btn">darken</button></li>
+                <li><button id="black_btn">black</button></li>
+                <li><button id="rainbow_btn">rainbow</button></li>
+                <li><button id="clear_btn">clear</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="jscolor.js"></script>
+</body>
+
+</html>
