@@ -6,11 +6,11 @@ let output = document.getElementById("demo");
 let color = document.getElementById("jscolor");
 output.innerHTML = slider.value; // Display the default slider value
 
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
-  grid.replaceChildren();
-  resetCanvas(slider.value);
+// Update the current slider value (each time you drag the slider handle
+slider.oninput = function () {
+    output.innerHTML = this.value;
+    grid.innerHTML = '';
+    resetCanvas(slider.value);
 }
 
 resetCanvas(slider.value);
@@ -25,7 +25,7 @@ document.getElementById('black_btn').onclick = function () {
 }
 
 document.getElementById('rainbow_btn').onclick = function () {
-    grid.replaceChildren();
+    grid.innerHTML = '';
     resetRgxCanvas(slider.value);
 }
 
@@ -35,12 +35,12 @@ document.getElementById('clear_btn').onclick = function () {
 
 document.getElementById('darken_btn').onclick = function () {
     blockColor = 'black';
-    grid.replaceChildren();
+    grid.innerHTML = '';
     resetDarkenCanvas(slider.value);
 }
 
-function clearCanvas(){
-    grid.replaceChildren();
+function clearCanvas() {
+    grid.innerHTML = '';
     resetCanvas(slider.value);
 }
 
@@ -49,8 +49,8 @@ function resetCanvas(size) {
         for (let j = 0; j < size; j++) {
 
             const div = document.createElement('div');
-            let dimension = 35 / size;
-            let style = `background: aliceblue; width: ${dimension}em; height: ${dimension}em;`;
+            let dimension = 100 / size;
+            let style = `background: aliceblue; width: ${dimension}%; height: ${dimension}%;`;
             div.setAttribute('style', style);
 
             div.addEventListener('mouseenter', () => { div.style.backgroundColor = blockColor; });
@@ -64,8 +64,8 @@ function resetRgxCanvas(size) {
         for (let j = 0; j < size; j++) {
 
             const div = document.createElement('div');
-            let dimension = 35 / size;
-            let style = `background: aliceblue; width: ${dimension}em; height: ${dimension}em;`;
+            let dimension = 100 / size;
+            let style = `background: aliceblue; width: ${dimension}%; height: ${dimension}%;`;
             div.setAttribute('style', style);
 
             div.addEventListener('mouseenter', () => {
@@ -83,8 +83,8 @@ function resetDarkenCanvas(size) {
         for (let j = 0; j < size; j++) {
 
             const div = document.createElement('div');
-            let dimension = 35 / size;
-            let style = `background: aliceblue; width: ${dimension}em; height: ${dimension}em;`;
+            let dimension = 100 / size;
+            let style = `background: aliceblue; width: ${dimension}%; height: ${dimension}%;`;
             div.setAttribute('style', style);
 
             div.addEventListener('mouseenter', () => {
@@ -92,7 +92,7 @@ function resetDarkenCanvas(size) {
                 div.style.opacity = opacity;
                 opacity += 0.1;
 
-                if(opacity >= 1){
+                if (opacity >= 1) {
                     opacity = 0;
                 }
             });
