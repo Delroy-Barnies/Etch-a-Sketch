@@ -86,6 +86,7 @@ body {
 .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: #04AA6D;
+    background: #464747;
+    border-radius: 50px;
     cursor: pointer;
 }
